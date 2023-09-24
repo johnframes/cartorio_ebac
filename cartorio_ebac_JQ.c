@@ -2,6 +2,7 @@
 #include <stdlib.h> //biblioteca de alocação de espaço de memória
 #include <locale.h> //biblioteca de alocações de texto por região
 #include <string.h> //biblioteca responsável por cuidar das strings
+#include <windows.h> //biblioteca com API's do Windows
 
 int registro() //Função responsável por registrar usuários no sistema
 {
@@ -127,14 +128,14 @@ int main()
 	int opcao=0; //Definindo variáveis
 	int laco=1;
 	char senhadigitada[10]="a"; //Senha fixa para o acesso do sistema
-	int retorno; //este int retorno significa o retorno que a função strcmp vai me dar, caso o retorno for 0 significa que a array é igual a admin, se for diferente de zero, no caso else, vai dar como senha inválida
+	int comparacao; //este int retorno significa o retorno que a função strcmp vai me dar, caso o retorno for 0 significa que a array é igual a admin, se for diferente de zero, no caso else, vai dar como senha inválida
 	
 	printf("### Cartório da EBAC ###\n\n");
 	printf("Login de administrador!\n\nDigite a sua senha: ");
 	scanf("%s",&senhadigitada); //Devemos colocar o & para atribuir o valor para a variável
-	retorno = strcmp(senhadigitada, "admin");
+	comparacao = strcmp(senhadigitada, "admin");
 	
-	if(retorno == 0)
+	if(comparacao == 0)
 	{
 		for(laco=1;laco=1;)
 		{	
